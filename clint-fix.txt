@@ -1,0 +1,126 @@
+https://codepen.io/ClintFix/pen/NWROjxd?editors=1100
+
+1. What is Semantic HTML? 
+    Using tags that are descriptive of the content they contain. 
+2. What is HTML used for? 
+    To markup/display data in a web browser.
+3. What is an attribute and where do we put it? 
+    An attribute passes information to an html element
+4. What is the h1 tag used for? How many times should I use it on a page?
+    Main header text. Once.
+5. Name two tags that have required attributes
+    <a> and <img>
+6. What do we put in the head of our HTML document? 
+    Title and other metadata
+7. What is an id? 
+    A unique identifier for a single html element
+8. What elements can I add an id to? 
+    Any HTML element
+9. How many times can I use the same id on a page? 
+    once
+10. What is a class?
+    A unique identifier for a single or group of html elements
+11. What elements can I add a class to? 
+    As many as needed
+12. How many times can I use the same class on a page? 
+    Unlimited?
+13. How do I get my link to open in a new tab?
+    target="_blank"
+14. What is the alt attribute in the image tag used for? 
+    describe the image for SEO and also for accessiblity/screen readers.
+15. How do I reference an id?
+    #id
+16. What is the difference between a section and a div
+    Section is semantic, div is not.
+17. What is CSS used for? 
+    Add style to HTML
+18. How to we select an element? Example - every h2 on the page
+    h2 {
+
+    }
+19. What is the difference between a class and an id? - Give me an example of when I might use each one
+    A Class can be used on multiple items. An ID can only be used on one. If my website had multiple blocks of text describing different features, the <p> that each block of text is inside could be styled at the same time with a class. An ID could be used for a specific button that's not reused in other places. 
+20. How do we select classes in CSS?
+    .Class
+21. How do we select a p element with a single class of “human””?
+    .human {}
+22. What is a parent child selector? When would this be useful? 
+    > It would be useful if you want all elements of a single kind that are nested under a parent class. 
+23. How do you select all links within a div with the class of sidebar?
+    .sidebar a {}
+24. What is a pseudo selector?
+    ability to change the styling based on user interaction. h2:hover for example. 
+25. What do we use the change the spacing between lines?
+    line-height:
+26. What do we use to change the spacing between letters?
+    letter-spacing:
+27. What do we use to to change everything to CAPITALS? lowercase? Capitalize?
+    text-transform: uppercase / lowercase / capitalize 
+28. How do I add a 1px border around my div that is dotted and black?
+    div {
+        border: 1px dotted black
+    }
+29. How do I select everything on the page? 
+    *
+30. How do I write a comment in CSS?
+    /*     */
+31. How do I find out what file I am in, when I am using the command line? 
+    pwd
+32. Using the command line - how do I see a list of files/folders in my current folder?
+    ls
+33. How do I remove a file via the command line? Why do I have to be careful with this? 
+    rm file.txt  Because it doesn't confirm the command and the file will be deleted completely.
+34. Why should I use version control? 
+    To protect code, see history, and track changes. 
+35. How often should I commit to github?
+    Anytime a new feature is added that's worth committing.
+36. What is the command we would use to push our repo up to github? 
+    git push -u origin clint-fix
+37. Walk me through Lambda's git flow. 
+    1. Fork
+    2. Clone
+    3. cd to desired working directory
+    4. git clone <link-to-repo>
+    5. cd into newly created repo
+    6. git checkout -b 'clint-fix'
+    7. work on project
+    8. git add
+    9. git commit -m 'comment on changes'
+    10. git push -u origin clint-fix (case sensitive branch-name)
+    11. submit pull request
+    12. branch:master -> clint-fix
+    13. compare and pull request
+    14. change to correct base repo
+    15. Create pull request
+
+Stretch Questions
+
+    1. What is the difference between an inline element and a block element?
+        A block element takes up an entire line. Inline elements (like span) can exist within the line.
+    2. What happens when an element is positioned absolutely? 
+        it is positioned relative to its ancestor element if it has one. Otherwise, it is positioned relative to the body.
+    3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width? 
+        wrap in <div> and give a width
+    4. Name 3 elements that are diplay block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
+        Display Block by default:
+            nav
+            div
+            header
+        Display Inline by default:
+            a
+            span
+            button
+        inline-block by default:
+            img
+
+    5. In your own words, explain the box model. What is the "fix" for the box model, in other words, how do we make all elements respect the width we've given them? 
+        The box model is how spacing works around html elements. Content -> padding -> border -> margin. Box size = width + padding + border.
+
+        The "fix" is to use box-sizing: border-box which makes width = content width + padding + border. 
+
+        html {
+            box-sizing: border-box;
+        }
+        *, *:before, *:after {
+             box-sizing: inherit;
+        }
